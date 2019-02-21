@@ -8,25 +8,47 @@
    src="https://code.jquery.com/jquery-3.2.1.min.js" 
    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
    crossorigin="anonymous"></script>
-   <link rel="stylesheet" href="styles/style.css">
-   <title>Document</title>
-  </head>
-  <body>
-    <form action="/charge" method="post" id="payment-form">
-      <div class="form-row">
-        <label for="card-element">
-          Credit or debit card
-        </label>
-        <div id="card-element">
-          <!-- A Stripe Element will be inserted here. -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <form action="http://localhost:5000/dojo-preview/us-central1/addStripeInfo" method="post" id="payment-form" class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Vanilla" id="first_name" type="text" class="validate" name="first_name">
+          <label for="first_name">First Name</label>
         </div>
-        
-        <!-- Used to display form errors. -->
-        <div id="card-errors" role="alert"></div>
+        <div class="input-field col s6">
+          <input placeholder="Ice" id="last_name" type="text" class="validate" name="last_name">
+          <label for="last_name">Last Name</label>
+        </div>
       </div>
-      <button>Submit Payment</button>
+      <div class="row">
+        <div class="input-field col s12">
+          <input placeholder="iceicebaby99@yahoo.com" type="email" name="email" id="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <div id="card-element">
+            <!-- A Stripe Element will be inserted here. -->
+          </div>
+          <div id="card-errors" role="alert"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12 right-align">
+          <button class="btn btn-primary">Access Course!</button>
+        </div>
+      </div>
     </form>
-    <script src="https://js.stripe.com/v3/"></script>
-    <script src="scripts/stripeElements.js"></script>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="scripts/stripeElements.js"></script>
 </body>
 </html>
