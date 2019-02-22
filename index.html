@@ -4,17 +4,28 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <script 
-   src="https://code.jquery.com/jquery-3.2.1.min.js" 
-   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" 
-   crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
   <link rel="stylesheet" href="styles/style.css">
   <title>Document</title>
 </head>
 <body>
   <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div id="js-basics" class="col s12 blue">
+          <h2>Introduction to JavaScript Algorithms</h2>
+          <h3>Learn one of the most versatile programming languages from scratch.</h3>
+        </div>
+        <div id="js-intermediate" class="col s12 red">Test 2</div>
+        <div id="web-fun" class="col s12 green">Test 3</div>
+        <ul id="" class="tabs">
+          <li class="tab"><a class="active" href="#js-basics">Intro to JS</a></li>
+          <li class="tab"><a href="#js-intermediate">Intermediate JS</a></li>
+          <li class="tab"><a href="#web-fun">Web Fundamentals</a></li>
+        </ul>
+      </div>
+    </div>
     <form action="http://localhost:5000/dojo-preview/us-central1/addStripeInfo" method="post" id="payment-form" class="col s12">
       <div class="row">
         <div class="input-field col s6">
@@ -47,8 +58,11 @@
       </div>
     </form>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://js.stripe.com/v3/"></script>
   <script src="scripts/stripeElements.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="scripts/style.js"></script>
 </body>
 </html>
